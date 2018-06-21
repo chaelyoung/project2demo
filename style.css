@@ -1,0 +1,129 @@
+body {
+    background: #EFEBE6;
+    color: black;
+    /*
+    font-family: Arial, Helvetica, sans-serif;
+    */
+    font-family: "Muli", sans-serif;
+}
+
+footer {
+    background: #F3A712;
+    color: white;
+    font-size: 10px;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+a:hover {
+    color: #F3A712 !important;
+}
+
+.nav-link {
+    font-family: "Caveat", cursive;
+    font-weight: bold !important;
+    color: white !important;
+    font-size: 150%;
+}
+
+.jumbotron {
+    margin-top: -101px;
+}
+
+.jumbo1 {
+    background: url("garage4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 600px; 
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.btn {
+    background: #DB2B39 !important;
+}
+.city {
+    color: #F3A712;
+    font-weight: boldest;
+    font-size: 24px;
+    letter-spacing: -2px;
+}
+
+#topLogo {
+    font-family: "Permanent Marker", cursive;
+    color: white;
+}
+
+#topLogo:hover {
+    color: white !important;
+}
+
+#mainLogo {
+    font-family: "Permanent Marker", cursive;
+    color: #DB2B39;
+}
+
+#tm {
+    font-size: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: black;
+}
+
+#jumboContainer {
+    margin-top: 160px;
+}
+
+#tm2 {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: black;
+}
+
+/*
+#leadIn {
+    margin-top: 175px !important;
+}
+*/
+
+#mainBtn {
+    font-weight: bold;
+}
+
+#mainBtn:hover {
+    background: #F3A712;
+    color: white;
+}
+
+#postJumbo {
+    height: 20px;
+    background: #DB2B39;
+    margin-top: -32px;
+}
+
+#firstLine {
+    font-weight: bold;
+}
+
+#lineBreak:after {
+    content: '\A';
+    white-space: pre;
+}
+
+/* Sell.html */
+
+.jumbo2 {
+    background: url("sell2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 600px; 
+}
+
+#sell {
+    color: white;
+}
