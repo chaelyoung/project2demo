@@ -19,6 +19,10 @@ a:hover {
     color: #F3A712 !important;
 }
 
+hr {
+    width: 60%;
+}
+
 .nav-link {
     font-family: "Caveat", cursive;
     font-weight: bold !important;
@@ -31,12 +35,24 @@ a:hover {
 }
 
 .jumbo1 {
-    background: url("garage4.jpg");
+    background: url("index.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 600px; 
+    height: 600px;
 }
+
+.main {
+    color: white;
+    background: black;
+    padding: 3px;
+    padding-right: 10px;
+    padding-left: 10px;
+    &::before {
+      content: "\A";
+      white-space: pre;
+    }
+  }
 
 .card-title {
     font-weight: bold;
@@ -54,11 +70,11 @@ a:hover {
 
 #topLogo {
     font-family: "Permanent Marker", cursive;
-    color: white;
+    color: #DB2B39;
 }
 
 #topLogo:hover {
-    color: white !important;
+    color: #F3A712 !important;
 }
 
 #mainLogo {
@@ -100,7 +116,7 @@ a:hover {
 }
 
 #postJumbo {
-    height: 20px;
+    height: 50px;
     background: #DB2B39;
     margin-top: -32px;
 }
@@ -117,7 +133,7 @@ a:hover {
 /* Sell.html */
 
 .jumbo2 {
-    background: url("sell2.jpg");
+    background: url("sell.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -127,3 +143,23 @@ a:hover {
 #sell {
     color: white;
 }
+
+/* Find */
+
+.jumbo3 {
+    background: url("find.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 600px; 
+}
+
+#map {
+    width: 100%;
+    margin-top: -32px;
+}
+
+#find {
+    color: white;
+}
+
