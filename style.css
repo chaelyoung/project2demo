@@ -151,6 +151,10 @@ hr {
     color: white;
 }
 
+.form-control-file {
+    align-content: center !important;
+}
+
 /* Find */
 
 .jumbo3 {
