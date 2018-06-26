@@ -1,4 +1,3 @@
-
 # Sample User Account Seed
 INSERT INTO `sale_db`.`user_account` (`firstname`, `lastname`, `username`, `about`, `email`, `password`, `last_login`, `status`) VALUES ('Mark	', 'Chaffin', 'mchaffin', 'to graduate', 'mark.chaffin@outlook.com', 'Fungi', '01/01/2018', 'Enabled');
 
