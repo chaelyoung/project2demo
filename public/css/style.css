@@ -187,6 +187,11 @@ hr {
     height: 475px;
 }
 
+#sellInfoJumbo {
+    background: #29335C !important;
+    margin-top: -32px;
+}
+
 #sellerBtn {
     background: #DB2B39 !important;
     font-weight: bold !important;
@@ -208,6 +213,29 @@ hr {
     height: 475px;
 }
 
+#listingAddress {
+    color: #F3A712;
+}
+
+#listingHouseImg {
+    width: 100%;
+}
+
+#listingMapImg {
+    width: 100%;
+}
+
+.listingCol {
+    background: white !important;
+}
+
+.listingInfo {
+    color: #F3A712 !important;
+}
+
+.listingInfoContent {
+    
+}
 
 
 
