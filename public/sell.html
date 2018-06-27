@@ -4,14 +4,17 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>GarageFinds</title>
+    <title>GarageFind</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- BOOTSTRAP CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- INTERNAL CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 
+    <!-- BOOTSTRAP JS CDN -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
 
@@ -21,18 +24,26 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
 
+    <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Muli|Caveat|Permanent+Marker" rel="stylesheet">
-
-    <link rel="stylesheet" media="all" href="https://rawgit.com/hankchizljaw/boilerform/master/dist/css/boilerform.min.css" />
 
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-transparent">
-        <a class="navbar-brand ml-3" id="topLogo" href="index.html">GarageFinds<span id="tm">TM</span>
+    <!-- SEARCH NAVBAR -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-custom">
+        <a class="navbar-brand ml-3" id="navLogo" href="index.html">GarageFind
+            <span class="tradeMark">TM</span>
         </a>
+        <div class="container mx-auto">
+            <div class="input-group" id="navSearchBar">
+                <input type="text" class="form-control" placeholder="City / Zip-Code">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-light pl-5 pr-5" id="searchBtn" type="button">FIND</button>
+                </div>
+            </div>
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -44,146 +55,192 @@
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item pr-4 pl-4">
+                <li class="nav-item pr-1 pl-4">
                     <a class="nav-link" href="sell.html">Sell</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Misc</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <div class="jumbotron jumbotron-fluid jumbo2">
-        <div class="container" id="jumboContainer">
-            <h1 class="display-3 text-center" id="mainLogo">GarageFinds<span id="tm2">TM</span>
-            </h1>
-            <p class="lead text-center" id="sell"><span class="main">Some call it garage sales, we prefer the term treasure hunting.</span></p>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="City / Zip-Code">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-light pl-5 pr-5" id="mainBtn" type="button">FIND</button>
+    <!-- SELL IMG JUMBO -->
+    <div class="jumbotron jumbotron-fluid" id="sellImgJumbo">
+    </div>
+
+    <!-- SELL INFO JUMBO -->
+    <div class="jumbotron jumbotron-fluid infoJumbo">
+        <div class="container">
+
+            <div class="row m-0 p-0">
+
+                <div class="col-md-4 m-0 px-3">
+                    <div class="card text-center bg-transparent border-0 infoCards">
+                        <div class="card-block">
+                            <img class="card-img-top pb-5 infoImg" src="img/search.png" alt="Search">
+                            <h3 class="card-title text-left infoCardTitle">Determine Your Sale</h3>
+                            <p class="card-text text-left">Determine the items to be sold, then the time and date of your sale.</p>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="col-md-4 m-0 px-3">
+                    <div class="card text-center bg-transparent border-0 infoCards">
+                        <div class="card-block">
+                            <img class="card-img-top pb-5 infoImg" src="img/find_icon.png" alt="Find">
+                            <h3 class="card-title text-left infoCardTitle">Fill & Submit Form</h3>
+                            <p class="card-text text-left">Fill out the information on GarageFind, then submit. The info provided will go through an extensive
+                                database that will match buyers with your listing.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 m-0 px-3">
+                    <div class="card text-center bg-transparent border-0 infoCards">
+                        <div class="card-block">
+                            <img class="card-img-top pb-5 infoImg" src="img/go.png" alt="Go">
+                            <h3 class="card-title text-left infoCardTitle">Watch Buyers Flock</h3>
+                            <p class="card-text text-left">Approximately 24 hours after you submit your listing, it will go live. Then, watch as buyers
+                                flock to your event and increase your sales.</p>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 
-    <!--
-    <hr id="postJumbo"> 
-    -->
+    <!-- SELL CONTENT - SELLER LISTING -->
+    <div class="row m-0 p-0">
 
-    <div class="container"></div>
+        <div class="col-md-12 text-center mt-5 mb-3">
+            <p class="h4">
+                <img src="img/glyphicons-66-tag.png">
+                <span class="city">LIST YOUR SALE</span>
+            </p>
+        </div>
 
-        <div class="row m-0 p-0">
+        <div class="col-md-6 offset-3 mb-3 mt-3 text-center">
 
-            <div class="col-md-12 text-center mt-5 mb-3">
-                <p class="h4">
-                    <img src="glyphicons-66-tag.png">
-                    <span class="city">LIST YOUR SALE</span>
-                </p>
-            </div>
+            <!-- FORM -->
+            <form>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Name</label>
+                    <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Bob Baker">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Address</label>
+                    <input type="address" class="form-control" id="exampleFormControlInput2" placeholder="12345 Cherry Lane">
+                </div>
 
-            <div class="col-md-6 offset-3 mb-3 mt-3 text-center">
-
-                <!-- Form -->
-                <form>
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Name</label>
-                        <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Bob Baker">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlInput1">Address</label>
-                        <input type="address" class="form-control" id="exampleFormControlInput2" placeholder="12345 Cherry Lane">
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-7">
-                                <div class="form-group">
-                                    <label for="exampleFormControlInput1">City</label>
-                                    <input type="City" class="form-control" id="exampleFormControlInput2" placeholder="Minneapolis">
-                                </div>
-                        </div>
-                        <div class="col-md-2">
-                                <div class="form-group">
-                                    <label for="exampleFormControlSelect1">State</label>
-                                    <select class="form-control" id="exampleFormControlSelect1">
-                                      <option>MN</option>
-                                      <option>WI</option>
-                                      <option>IA</option>
-                                      <option>IL</option>
-                                      <option>MI</option>
-                                    </select>
-                                </div>
-                        </div>
-                        <div class="col-md-3">
-                                <div class="form-group">
-                                    <label for="exampleFormControlInput1">Zip Code</label>
-                                    <input type="Zip Code" class="form-control" id="exampleFormControlInput2" placeholder="12345">
-                                </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">City</label>
+                            <input type="City" class="form-control" id="exampleFormControlInput2" placeholder="Minneapolis">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-8">
-                                <div class="form-group">
-                                    <label for="exampleFormControlInput1">Date of Sale</label>
-                                    <input type="City" class="form-control" id="exampleFormControlInput2" placeholder="06/30/18 - 07/01/18">
-                                </div>
-                        </div>
-                        <div class="col-md-4">
-                                <div class="form-group">
-                                    <label for="exampleFormControlInput1">Time of Sale</label>
-                                    <input type="Zip Code" class="form-control" id="exampleFormControlInput2" placeholder="2:00 PM - 8:00PM">
-                                </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">State</label>
+                            <select class="form-control" id="exampleFormControlSelect1">
+                                <option>MN</option>
+                                <option>WI</option>
+                                <option>IA</option>
+                                <option>IL</option>
+                                <option>MI</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect2">Catagories of Items (Select All That Apply)</label>
-                        <select multiple class="form-control" id="exampleFormControlSelect2">
-                            <option>Electronics</option>
-                            <option>Furniture</option>
-                            <option>Clothing</option>
-                            <option>Antiques</option>
-                            <option>Others</option>
-                        </select>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Zip Code</label>
+                            <input type="Zip Code" class="form-control" id="exampleFormControlInput2" placeholder="12345">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Comments For Buyers</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>                    
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1"><small>By checking this box you agree that all information submitted is not falsified, and is true. You agree that you reside at the address listed above and/or have permission to make a sale(s) on said property. You agree for GarageFinds to list your information on it's site for the purpose of connecting you to buyers. Lastly, you also agree that you are not a bot... because you can't possibly be one.</small></label>
-                      </div>
-                      <br>
-                    <div class="input-group-append justify-content-center" id="sellerBtn">
-                        <button class="btn btn-outline-light pl-5 pr-5" id="mainBtn" type="button">SUBMIT</button>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Date of Sale</label>
+                            <input type="City" class="form-control" id="exampleFormControlInput2" placeholder="06/30/18 - 07/01/18">
+                        </div>
                     </div>
-                </form>
-
-            </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Start Time</label>
+                            <input type="Zip Code" class="form-control" id="exampleFormControlInput2" placeholder="2:00 PM - 8:00PM">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">End Time</label>
+                            <input type="Zip Code" class="form-control" id="exampleFormControlInput2" placeholder="2:00 PM - 8:00PM">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect2">Catagories of Items (Select All That Apply)</label>
+                    <select multiple class="form-control" id="exampleFormControlSelect2">
+                        <option>Electronics</option>
+                        <option>Furniture</option>
+                        <option>Clothing</option>
+                        <option>Antiques</option>
+                        <option>Others</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Comments For Buyers</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">
+                        <small>By checking this box you agree that all information submitted is not falsified, and is true. You
+                            agree that you reside at the address listed above and/or have permission to make a sale(s) on
+                            said property. You agree for GarageFinds to list your information on it's site for the purpose
+                            of connecting you to buyers. Lastly, you also agree that you are not a bot... because you can't
+                            possibly be one.</small>
+                    </label>
+                </div>
+                <br>
+                <div class="input-group-append justify-content-center">
+                    <button class="btn btn-outline-light pl-5 pr-5" id="sellerBtn" type="button">SUBMIT</button>
+                </div>
+            </form>
 
         </div>
 
     </div>
 
+    <!-- FOOTER -->
     <footer>
+
         <div class="row m-0 p-0 text-center">
 
             <div class="col-md-6 text-left">
                 <p>
-                    <span id="firstLine">GarageFinds</span>&nbsp;TM<br>555 Minnesota Blvd<br>Minneapolis, MN 55411<br>555-555-5555<br>info@GarageFind.com<br>
+                    <span id="footerBrand">GarageFind</span>&nbsp;TM
+                    <br>555 Minnesota Blvd
+                    <br>Minneapolis, MN 55411
+                    <br>555-555-5555
+                    <br>info@GarageFind.com
+                    <br>
                 </p>
             </div>
 
             <div class="col-md-6 text-right">
-                <p>
-                    <span class="lineBreak">GarageFind is founded by UMN Coding Bootcamp students.</span><br>© 2018. All Rights Reserved.
+                <p>GarageFind(TM) is founded by UMN Coding Bootcamp students.
+                    <br> ©2018 All Rights Reserved.
                     <div class="row">
                         <div class="col-md-12 text-right">
-                            <a href="http://www.facebook.com"><img class="icon" src="fb.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="href="http://www.instagram.com""><img class="icon" src="insta.png"></a>    
+                            <a href="http://www.facebook.com">
+                                <img id="fbIcon" src="img/fb.png">
+                            </a>
+                            <a href="href=" http://www.instagram.com "">
+                                <img id="igIcon" src="img/insta.png">
+                            </a>
                         </div>
                     </div>
-                    
                 </p>
             </div>
 

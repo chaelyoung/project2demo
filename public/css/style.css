@@ -1,9 +1,6 @@
 body {
     background: #EFEBE6;
     color: black;
-    /*
-    font-family: Arial, Helvetica, sans-serif;
-    */
     font-family: "Muli", sans-serif;
 }
 
@@ -23,6 +20,34 @@ hr {
     width: 60%;
 }
 
+/*** INDEX PAGE ***/
+
+/* MAIN JUMBO */
+#navLogo {
+    font-size: 24px;
+    font-family: "Permanent Marker", cursive;
+    color: white;
+}
+
+#navLogo:hover {
+    color: #F3A712 !important;
+}
+
+.tradeMark {
+    font-size: 8px !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+    font-weight: bold !important;
+    color: black !important;
+}
+
+.navbar-toggler {
+    border-color: white !important;
+}
+  
+.navbar-toggler-icon {
+    background: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+  }
+
 .nav-link {
     font-family: "Caveat", cursive;
     font-weight: bold !important;
@@ -30,147 +55,160 @@ hr {
     font-size: 150%;
 }
 
-.jumbotron {
-    margin-top: -101px;
-}
-
-.jumbo1 {
-    background: url("index.jpg");
+.mainJumbo {
+    background: url("../img/index.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     height: 600px;
+    margin-top: -68px;
 }
 
-.main {
-    color: white;
-    background: black;
-    padding: 3px;
-    padding-right: 10px;
-    padding-left: 10px;
-    &::before {
-      content: "\A";
-      white-space: pre;
-    }
-  }
-
-.card-title {
-    font-weight: bold;
+#mainJumboContainer {
+    margin-top: 130px;
 }
 
-.btn {
-    background: #DB2B39 !important;
-}
-.city {
-    color: #F3A712;
-    font-weight: boldest;
-    font-size: 24px;
-    letter-spacing: -2px;
-}
-
-.icon {
-    width: 25px !important;
-
-}
-
-#topLogo {
-    font-family: "Permanent Marker", cursive;
-    color: #DB2B39;
-}
-
-#topLogo:hover {
-    color: #F3A712 !important;
-}
-
-#mainLogo {
+#mainJumboLogo {
     font-family: "Permanent Marker", cursive;
     color: #DB2B39;
     text-shadow: 50px 50px 100px silver;
 }
 
-#tm {
-    font-size: 8px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    color: black;
-}
-
-#jumboContainer {
-    margin-top: 160px;
-}
-
-#tm2 {
+#tradeMark2 {
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: black;
 }
 
-/*
-#leadIn {
-    margin-top: 175px !important;
+.mainJumboLeadHighlight {
+    color: white;
+    background: black;
+    padding: 3px;
+    padding-right: 10px;
+    padding-left: 10px;
+    &:before {
+      content: "\A";
+      white-space: pre;
+    }
 }
-*/
 
-#mainBtn {
+#searchBtn {
+    background: #DB2B39;
     font-weight: bold;
 }
 
-#mainBtn:hover {
+#searchBtn:hover {
     background: #F3A712;
     color: white;
 }
 
-#postJumbo {
-    height: 50px;
-    background: #DB2B39;
+/* INFO JUMBO */
+.infoJumbo {
+    background: #F3A712;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     margin-top: -32px;
 }
 
-#firstLine {
+.infoCards {
+    color: white;
+}
+
+.infoImg {
+    width: 150px;
+}
+
+.infoCardTitle {
+    font-weight: bold;
+}
+
+/* INDEX CONTENT */
+
+.indListingBtn {
+    background: #DB2B39 !important;
+}
+
+.contentCity {
+    color: #F3A712;
+    font-weight: boldest;
+    font-size: 24px;
+    letter-spacing: -2px;
+}
+
+#fbIcon {
+    width: 28px !important;
+}
+
+#igIcon {
+    width: 40px !important;
+    padding-left: 10px !important;
+}
+
+/* FOOTER */
+
+#footerBrand {
     font-weight: bold;
     font-size:16px;
 }
 
-#lineBreak:after {
-    content: '\A';
-    white-space: pre;
+
+/*** FIND, SELL, LISTING PAGE ***/
+.bg-custom {
+    background: #DB2B39;
 }
 
-/* Sell.html */
-
-.jumbo2 {
-    background: url("sell.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 600px; 
+#navSearchBar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 60%;
+    float: none;
+    text-align: center;
 }
 
-#sell {
-    color: white;
-}
 
-.form-control-file {
-    align-content: center !important;
-}
+/*** FIND PAGE ***/
 
-/* Find */
-
-.jumbo3 {
-    background: url("find.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 600px; 
-}
-
-#map {
+#findMap {
     width: 100%;
-    margin-top: -32px;
 }
 
-#find {
-    color: white;
+
+/*** SELL PAGE ***/
+
+#sellImgJumbo {
+    background: url("../img/find.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 475px;
 }
+
+#sellerBtn {
+    background: #DB2B39 !important;
+    font-weight: bold !important;
+}
+
+#sellerBtn:hover {
+    background: #F3A712 !important;
+    color: white !important;
+}
+
+
+/*** LISTING PAGE ***/
+
+#listingImgJumbo {
+    background: url("../img/sell.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 475px;
+}
+
+
+
+
 

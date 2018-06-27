@@ -4,14 +4,17 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>GarageFinds</title>
+    <title>GarageFind</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- BOOTSTRAP CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- INTERNAL CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 
+    <!-- BOOTSTRAP JS CDN -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
 
@@ -21,18 +24,25 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
         crossorigin="anonymous"></script>
 
+    <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Muli|Caveat|Permanent+Marker" rel="stylesheet">
-
-    <link rel="stylesheet" media="all" href="https://rawgit.com/hankchizljaw/boilerform/master/dist/css/boilerform.min.css" />
 
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-transparent">
-        <a class="navbar-brand ml-3" id="topLogo" href="index.html">GarageFinds<span id="tm">TM</span>
+    <!-- SEARCH NAVBAR -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-custom">
+        <a class="navbar-brand ml-3" id="navLogo" href="index.html">GarageFind<span class="tradeMark">TM</span>
         </a>
+        <div class="container mx-auto">
+                <div class="input-group" id="navSearchBar">
+                    <input type="text" class="form-control" placeholder="City / Zip-Code">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-light pl-5 pr-5" id="searchBtn" type="button">FIND</button>
+                    </div>
+                </div>
+            </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -44,164 +54,151 @@
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item pr-4 pl-4">
+                <li class="nav-item pr-1 pl-4">
                     <a class="nav-link" href="sell.html">Sell</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Misc</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <div class="jumbotron jumbotron-fluid jumbo3">
-        <div class="container" id="jumboContainer">
-            <h1 class="display-3 text-center" id="mainLogo">GarageFinds<span id="tm2">TM</span>
-            </h1>
-            <p class="lead text-center" id="find"><span class="main">Some call it garage sales, we prefer the term treasure hunting.</span></p>
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="City / Zip-Code">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-light pl-5 pr-5" id="mainBtn" type="button">FIND</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--
-    <hr id="postJumbo"> 
-    -->
-
+    <!-- RESULTS MAP -->
     <div class="row">
         <div class="col-md-12">
-            <img id="map" src="map.jpg">
+            <img id="findMap" src="../public/img/map.jpg">
         </div>
     </div>
-    
 
+    <!-- FIND CONTENT - SEARCH RESULT LISTINGS -->
     <div class="container">
 
-            <div class="row m-0 p-0">
-    
-                <div class="col-md-12 mb-3 mt-5">
-                    <p class="h6"><img src="glyphicons-66-tag.png">&nbsp;&nbsp;Current sales in
-                        <span class="city">MINNEAPOLIS, MN</span>
-                    </p>
-                </div>
-    
+        <div class="row m-0 p-0">
+
+            <div class="col-md-12 mb-3 mt-5">
+                <p class="h6"><img src="img/glyphicons-66-tag.png">&nbsp;&nbsp;Current sales in
+                    <span class="contentCity">MINNEAPOLIS, MN</span>
+                </p>
             </div>
-    
-            <div class="row m-0 p-0">
-    
-                <div class="col-md-4 m-0 p-0">
-                    <div class="card text-center">
-                        <img class="card-img-top" src="house1.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">789 Stark Ln</h5>
-                            <p class="card-text">Found a metal gauntlet with some stones in them. Never used it before and figured someone may have a use for it. Selling other items as well: amulets, rare metals from foreign land, and metal suits.</p>
-                            <a href="#" class="btn btn-primary border-0">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-md-4 m-0 p-0">
-                    <div class="card text-center">
-                        <img class="card-img-top" src="house2.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">5678 Isle Lake Dr</h5>
-                            <p class="card-text">We have too much stuff and want to get rid of it. Not picky on price, offering the best deals for all buyers. Come and get it quick, things will sell out I promise!</p>
-                            <br>
-                            <a href="#" class="btn btn-primary border-0">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-md-4 m-0 p-0">
-                    <div class="card text-center">
-                        <img class="card-img-top" src="house3.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">345 Westshire Ln</h5>
-                            <p class="card-text">Emptying out the closet full of kids clothes. We no longer need them. Come and find items, most are good... there are some antiques.</p>
-                            <br>
-                            <a href="#" class="btn btn-primary border-0">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-    
-            </div>
-    
-            <div class="row m-0 p-0">
-    
-                <div class="col-md-12 mb-3 mt-5">
-                    <p class="h6"><img src="glyphicons-66-tag.png">&nbsp;&nbsp;Current sales in
-                        <span class="city">ROSEVILLE, MN</span>
-                    </p>
-                </div>
-    
-            </div>
-    
-            <div class="row m-0 p-0">
-    
-                <div class="col-md-4 m-0 p-0">
-                    <div class="card text-center">
-                        <img class="card-img-top" src="house4.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">1550 Smith Ave</h5>
-                            <p class="card-text">Lots of electronics and furniture!</p>
-                            <a href="#" class="btn btn-primary border-0">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-md-4 m-0 p-0">
-                    <div class="card text-center">
-                        <img class="card-img-top" src="house5.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">17786 James Ave W</h5>
-                            <p class="card-text">Cleaning out the house. Willing to bargain!</p>
-                            <a href="#" class="btn btn-primary border-0">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="col-md-4 m-0 p-0">
-                    <div class="card text-center">
-                        <img class="card-img-top" src="house6.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">989 W Blvd</h5>
-                            <p class="card-text">Moving out and willing to sell everything.</p>
-                            <a href="#" class="btn btn-primary border-0">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-    
-            </div>
-    
+
         </div>
 
-        <footer>
-            <div class="row m-0 p-0 text-center">
-    
-                <div class="col-md-6 text-left">
-                    <p>
-                        <span id="firstLine">GarageFinds</span>&nbsp;TM<br>555 Minnesota Blvd<br>Minneapolis, MN 55411<br>555-555-5555<br>info@GarageFind.com<br>
-                    </p>
+        <div class="row m-0 p-0">
+
+            <div class="col-md-4 m-0 p-0">
+                <div class="card text-center">
+                    <img class="card-img-top" src="img/house1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">789 Stark Ln</h5>
+                        <p class="card-text">Found a metal gauntlet with some stones in them. Never used it before and figured someone may have a use for it. Selling other items as well: amulets, rare metals from foreign land, and metal suits.</p>
+                        <a href="#" class="btn btn-primary border-0 indListingBtn">Go somewhere</a>
+                    </div>
                 </div>
-    
-                <div class="col-md-6 text-right">
-                    <p>
-                        <span class="lineBreak">GarageFind is founded by UMN Coding Bootcamp students.</span><br>© 2018. All Rights Reserved.
-                        <div class="row">
-                            <div class="col-md-12 text-right">
-                                <a href="http://www.facebook.com"><img class="icon" src="fb.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="href="http://www.instagram.com""><img class="icon" src="insta.png"></a>    
-                            </div>
-                        </div>
-                        
-                    </p>
-                </div>
-    
             </div>
-        </footer>
+
+            <div class="col-md-4 m-0 p-0">
+                <div class="card text-center">
+                    <img class="card-img-top" src="img/house2.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">5678 Isle Lake Dr</h5>
+                        <p class="card-text">We have too much stuff and want to get rid of it. Not picky on price, offering the best deals for all buyers. Come and get it quick, things will sell out I promise!</p>
+                        <br>
+                        <a href="#" class="btn btn-primary border-0 indListingBtn">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 m-0 p-0">
+                <div class="card text-center">
+                    <img class="card-img-top" src="img/house3.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">345 Westshire Ln</h5>
+                        <p class="card-text">Emptying out the closet full of kids clothes. We no longer need them. Come and find items, most are good... there are some antiques.</p>
+                        <br>
+                        <a href="#" class="btn btn-primary border-0 indListingBtn">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row m-0 p-0">
+
+            <div class="col-md-12 mb-3 mt-5">
+                <p class="h6"><img src="img/glyphicons-66-tag.png">&nbsp;&nbsp;Current sales in
+                    <span class="contentCity">ROSEVILLE, MN</span>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="row m-0 p-0">
+
+            <div class="col-md-4 m-0 p-0">
+                <div class="card text-center">
+                    <img class="card-img-top" src="img/house4.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">1550 Smith Ave</h5>
+                        <p class="card-text">Lots of electronics and furniture!</p>
+                        <a href="#" class="btn btn-primary border-0 indListingBtn">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 m-0 p-0">
+                <div class="card text-center">
+                    <img class="card-img-top" src="img/house5.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">17786 James Ave W</h5>
+                        <p class="card-text">Cleaning out the house. Willing to bargain!</p>
+                        <a href="#" class="btn btn-primary border-0 indListingBtn">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 m-0 p-0">
+                <div class="card text-center">
+                    <img class="card-img-top" src="img/house6.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">989 W Blvd</h5>
+                        <p class="card-text">Moving out and willing to sell everything.</p>
+                        <a href="#" class="btn btn-primary border-0 indListingBtn">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        
+        <div class="row m-0 p-0 text-center">
+
+            <div class="col-md-6 text-left">
+                <p>
+                    <span id="footerBrand">GarageFind</span>&nbsp;TM<br>555 Minnesota Blvd<br>Minneapolis, MN 55411<br>555-555-5555<br>info@GarageFind.com<br>
+                </p>
+            </div>
+
+            <div class="col-md-6 text-right">
+                <p>GarageFind(TM) is founded by UMN Coding Bootcamp students.
+                <br>
+                ©2018 All Rights Reserved.
+                <div class="row">
+                    <div class="col-md-12 text-right">
+                        <a href="http://www.facebook.com">
+                            <img id="fbIcon" src="img/fb.png">
+                        </a>
+                        <a href="href="http://www.instagram.com"">
+                            <img id="igIcon" src="img/insta.png">
+                        </a>    
+                    </div>
+                </div>
+                </p>
+            </div>
+
+        </div>
+    </footer>
 
 </body>
 
