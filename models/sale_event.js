@@ -35,7 +35,7 @@ module.exports = function(sequelize, DataTypes) {
       primaryKey: true
     },
     date: {
-      type: DataTypes.DATE,
+      type: DataTypes.DATEONLY,
       allowNull: false,
       primaryKey: true
     },
@@ -45,6 +45,14 @@ module.exports = function(sequelize, DataTypes) {
     },
     end_time: {
       type: DataTypes.DATE,
+      allowNull: true
+    },
+    comments: {
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+    photo_url: {
+      type: DataTypes.STRING,
       allowNull: true
     }
   }, {
