@@ -1,65 +1,153 @@
 <!-- INDEX CONTENT -->
-<div class="container">{{sale}}</div>
-<div class="container">
+<!-- NAVBAR -->
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-transparent">
+    <a class="navbar-brand ml-3" id="navLogo" href="index.html">GarageFind
+        <span class="tradeMark">TM</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end mr-3" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="find.html">Find
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item pr-1 pl-4">
+                <a class="nav-link" href="sell.html">Sell</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- MAIN JUMBO -->
+<div class="jumbotron jumbotron-fluid mainJumbo">
+    <div class="container" id="mainJumboContainer">
+        <h1 class="display-3 text-center" id="mainJumboLogo">GarageFind
+            <span id="tradeMark2">TM</span>
+        </h1>
+        <p class="lead text-center">
+            <span class="mainJumboLeadHighlight">Some call it garage sales, we prefer the term treasure hunting.</span>
+        </p>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="City / Zip-Code">
+            <div class="input-group-append">
+                <button class="btn btn-outline-light pl-5 pr-5" id="searchBtn" type="button">FIND</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- INFO JUMBO -->
+<div class="jumbotron jumbotron-fluid infoJumbo">
+    <div class="container">
 
         <div class="row m-0 p-0">
 
-            <div class="col-md-12 mb-3 mt-3">
-                <p class="h6"><img src="img/glyphicons-66-tag.png">&nbsp;&nbsp;Current sales in
-                    <span class="contentCity">MINNEAPOLIS, MN</span>
-                </p>
+            <div class="col-md-4 m-0 px-3">
+                <div class="card text-center bg-transparent border-0 infoCards">
+                    <div class="card-block">
+                        <img class="card-img-top pb-5 infoImg" src="img/search.png" alt="Search">
+                        <h3 class="card-title text-left infoCardTitle">Search</h3>
+                        <p class="card-text text-left">Search for garage sales by city, zip code, or item categories.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 m-0 px-3">
+                <div class="card text-center bg-transparent border-0 infoCards">
+                    <div class="card-block">
+                        <img class="card-img-top pb-5 infoImg" src="img/find_icon.png" alt="Find">
+                        <h3 class="card-title text-left infoCardTitle">Find</h3>
+                        <p class="card-text text-left">Sort through list of garage sales and add them to route. GarageFind will calculate the quickest route
+                            through all garage sales so you can spend more time "treasure hunting."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 m-0 px-3">
+                <div class="card text-center bg-transparent border-0 infoCards">
+                    <div class="card-block">
+                        <img class="card-img-top pb-5 infoImg" src="img/go.png" alt="Go">
+                        <h3 class="card-title text-left infoCardTitle">Go!</h3>
+                        <p class="card-text text-left">Drive, walk, or take a bike out to garage sale(s) and find "treasures."</p>
+                        <br>
+                    </div>
+                </div>
             </div>
 
         </div>
+    </div>
+</div>
+<div class="container">
 
-        <div class="row m-0 p-0">
+    <div class="row m-0 p-0">
 
-             <div class="col-md-4 m-0 p-0"> 
-                <div class="card text-center">
-                    {{#each listing}}
-                        <img class="card-img-top" src="{{ this.image }}" >
-                        <h5 class="card-title">{{ this.address }}</h5>
-                        <p class="card-text">{{ this.comment }}</p>
-                        <div>{{this.listingRoute}}</div> <!-- this might need a correction -->
-                    {{/each}}
-                </div>
-            </div>
-
-            <div class="col-md-4 m-0 p-0">
-                <div class="card text-center">
-                    <img class="card-img-top" src="img/house1.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">789 Stark Ln</h5>
-                        <p class="card-text">Found a metal gauntlet with some stones in them. Never used it before and figured someone may have a use for it. Selling other items as well: amulets, rare metals from foreign land, and metal suits.</p>
-                        <a href="listing.html" class="btn btn-primary border-0 indListingBtn">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 m-0 p-0">
-                <div class="card text-center">
-                    <img class="card-img-top" src="img/house2.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">5678 Isle Lake Dr</h5>
-                        <p class="card-text">We have too much stuff and want to get rid of it. Not picky on price, offering the best deals for all buyers. Come and get it quick, things will sell out I promise!</p>
-                        <br>
-                        <a href="listing.html" class="btn btn-primary border-0 indListingBtn">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 m-0 p-0">
-                <div class="card text-center">
-                    <img class="card-img-top" src="img/house3.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">345 Westshire Ln</h5>
-                        <p class="card-text">Emptying out the closet full of kids clothes. We no longer need them. Come and find items, most are good... there are some antiques.</p>
-                        <br>
-                        <a href="listing.html" class="btn btn-primary border-0 indListingBtn">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-
+        <div class="col-md-12 mb-3 mt-3">
+            <p class="h6">
+                <img src="img/glyphicons-66-tag.png">&nbsp;&nbsp;Current sales in
+                <span class="contentCity">MINNEAPOLIS, MN</span>
+            </p>
         </div>
 
     </div>
+    <div class="container">{{sale}}</div>
+    <div class="row m-0 p-0">
+
+        {{#each sale}}
+        <div class="col-md-4 m-0 p-0">
+            <div class="card text-center">
+                <img class="card-img-top" src="{{ this.photo_url }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ this.address }}</h5>
+                    <p class="card-text">{{ this.comments }}</p>
+                    <a href="#" class="btn btn-primary border-0 indListingBtn">Check it Out</a>
+                    <!-- this might need a correction -->
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+        <div class="col-md-4 m-0 p-0">
+            <div class="card text-center">
+                <img class="card-img-top" src="img/house1.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">789 Stark Ln</h5>
+                    <p class="card-text">Found a metal gauntlet with some stones in them. Never used it before and figured someone may have a
+                        use for it. Selling other items as well: amulets, rare metals from foreign land, and metal suits.</p>
+                    <a href="listing.html" class="btn btn-primary border-0 indListingBtn">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 m-0 p-0">
+            <div class="card text-center">
+                <img class="card-img-top" src="img/house2.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">5678 Isle Lake Dr</h5>
+                    <p class="card-text">We have too much stuff and want to get rid of it. Not picky on price, offering the best deals for all
+                        buyers. Come and get it quick, things will sell out I promise!</p>
+                    <br>
+                    <a href="listing.html" class="btn btn-primary border-0 indListingBtn">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 m-0 p-0">
+            <div class="card text-center">
+                <img class="card-img-top" src="img/house3.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">345 Westshire Ln</h5>
+                    <p class="card-text">Emptying out the closet full of kids clothes. We no longer need them. Come and find items, most are good...
+                        there are some antiques.</p>
+                    <br>
+                    <a href="listing.html" class="btn btn-primary border-0 indListingBtn">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
