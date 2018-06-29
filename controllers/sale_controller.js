@@ -8,12 +8,14 @@ var db = require("../models");
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function (req, res) {
   db.sale_event.findAll({
+    where : {
+      city : "Minneapolis"
+    }
   }).then(function (data) {
     var hbsObject = {
-      // please remove stringify while actually rendering object in template
-      sale: JSON.stringify(data) 
+      sale: data 
     };
-    console.log(hbsObject)
+    console.log(hbsObject);
     res.render("index", hbsObject);
   });
 });
