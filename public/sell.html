@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 
     <!-- BOOTSTRAP JS CDN -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
         crossorigin="anonymous"></script>
@@ -122,27 +122,27 @@
         <div class="col-md-6 offset-3 mb-3 mt-3 text-center">
 
             <!-- FORM -->
-            <form>
+            <form class="create-form">
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Name</label>
-                    <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Bob Baker">
+                    <input type="name" class="form-control" id="name" placeholder="Bob Baker">
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Address</label>
-                    <input type="address" class="form-control" id="exampleFormControlInput2" placeholder="12345 Cherry Lane">
+                    <input type="address" class="form-control" id="address" placeholder="12345 Cherry Lane">
                 </div>
 
                 <div class="row">
                     <div class="col-md-7">
                         <div class="form-group">
                             <label for="exampleFormControlInput1">City</label>
-                            <input type="City" class="form-control" id="exampleFormControlInput2" placeholder="Minneapolis">
+                            <input type="City" class="form-control" id="city" placeholder="Minneapolis">
                         </div>
                     </div>
                     <div class="col-md-2">
                         <div class="form-group">
                             <label for="exampleFormControlSelect1">State</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
+                            <select class="form-control" id="state">
                                 <option>MN</option>
                                 <option>WI</option>
                                 <option>IA</option>
@@ -154,27 +154,33 @@
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Zip Code</label>
-                            <input type="Zip Code" class="form-control" id="exampleFormControlInput2" placeholder="12345">
+                            <input type="Zip Code" class="form-control" id="zipcode" placeholder="12345">
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label for="exampleFormControlInput1">Date of Sale</label>
-                            <input type="City" class="form-control" id="exampleFormControlInput2" placeholder="06/30/18 - 07/01/18">
+                            <label for="date">Date of Sale</label>
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-lg fa-calendar">
+                                    </i>
+                                </div>
+                                <input type="text" class="form-control ml-1" id="date" placeholder="MM/DD/YYYY">
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Start Time</label>
-                            <input type="Zip Code" class="form-control" id="exampleFormControlInput2" placeholder="2:00 PM - 8:00PM">
+                            <input type="Zip Code" class="form-control" id="start-time" placeholder="08:00">
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="exampleFormControlInput1">End Time</label>
-                            <input type="Zip Code" class="form-control" id="exampleFormControlInput2" placeholder="2:00 PM - 8:00PM">
+                            <input type="Zip Code" class="form-control" id="end-time" placeholder="16:00">
                         </div>
                     </div>
                 </div>
@@ -190,7 +196,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleFormControlTextarea1">Comments For Buyers</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" id="comments" rows="3"></textarea>
                 </div>
                 <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -246,7 +252,7 @@
 
         </div>
     </footer>
-
+    <script src="./js/sell.js"></script>
 </body>
 
 </html>
