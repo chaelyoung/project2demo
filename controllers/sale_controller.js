@@ -20,11 +20,11 @@ router.get("/", function (req, res) {
   });
 });
 
-// router.post("/api/sale_event", function(req, res) {
-//   db.Author.create(req.body).then(function(dbAuthor) {
-//     res.json(dbAuthor);
-//   });
-// });
+router.post("/api/sale", function(req, res) {
+  db.sale_event.create(req.body).then(function(dbSale) {
+    res.json(dbSale);
+  });
+});
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/listing/:id", function (req, res) {
