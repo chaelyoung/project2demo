@@ -137,6 +137,13 @@ hr {
     letter-spacing: -2px;
 }
 
+.customCardImg {
+}
+
+.customCard {
+    height: 500px;
+}
+
 #fbIcon {
     width: 28px !important;
 }
