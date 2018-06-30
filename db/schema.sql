@@ -26,6 +26,8 @@ CREATE TABLE IF NOT EXISTS `sale_db`.`sale_event` (
   `date` DATETIME NOT NULL,
   `start_time` DATETIME NULL,
   `end_time` DATETIME NULL,
+  `comments` VARCHAR(255) NULL,
+  `photo_url` VARCHAR(255) NULL,
   PRIMARY KEY (`id`, `useraccount_id`, `zip`, `date`),
   INDEX `useraccount_id` (`useraccount_id` ASC),
   CONSTRAINT `sale_event_ibfk_1`
