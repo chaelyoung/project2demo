@@ -26,6 +26,19 @@ router.get("/", function (req, res) {
 //   });
 // });
 
+// Create all our routes and set up logic within those routes where required.
+router.get("/listing/:id", function (req, res) {
+  db.sale_event.findAll({
+    where : {
+      id : req.params.id
+    }
+  }).then(function (data) {
+    var hbsObject = {sale: data[0]}
+    console.log(hbsObject);
+    res.render("sale", hbsObject);
+  });
+});
+
 // // update the devoured status
 // router.put("/api/burgers/:id", function(req, res) {
 //   var condition = "id = " + req.params.id;
