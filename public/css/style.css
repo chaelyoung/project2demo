@@ -130,6 +130,11 @@ hr {
     background: #DB2B39 !important;
 }
 
+.indListingBtn:hover {
+    background: #F3A712 !important;
+    color: white !important;
+}
+
 .contentCity {
     color: #F3A712;
     font-weight: boldest;
@@ -187,7 +192,7 @@ hr {
 /*** SELL PAGE ***/
 
 #sellImgJumbo {
-    background: url("../img/find.jpg");
+    background: url("../img/sell.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -213,7 +218,7 @@ hr {
 /*** LISTING PAGE ***/
 
 #listingImgJumbo {
-    background: url("../img/sell.jpg");
+    background: url("../img/listing.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -232,6 +237,19 @@ hr {
     width: 100%;
 }
 
+#listingManageRow {
+    background: white;
+}
+
+.listingManageBtn {
+    background: #DB2B39 !important;
+}
+
+.listingManageBtn:hover {
+    background: #F3A712 !important;
+    color: white !important;
+}
+
 .listingCol {
     background: white !important;
 }
@@ -242,6 +260,29 @@ hr {
 
 .listingInfoContent {
     
+}
+
+/*** LISTING-MANAGER PAGE ***/
+
+#managerImgJumbo {
+    background: url("../img/manager.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 475px;
+}
+
+#managerUser{}
+#managerAddress{}
+#managerDate{}
+
+.managerEditBtn {
+    background: #DB2B39 !important;
+}
+
+.managerEditBtn:hover {
+    background: #F3A712 !important;
+    color: white !important;
 }
 
 
