@@ -1,7 +1,7 @@
 <!-- INDEX CONTENT -->
 <!-- NAVBAR -->
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-transparent">
-    <a class="navbar-brand ml-3" id="navLogo" href="index.html">GarageFind
+    <a class="navbar-brand ml-3" id="navLogo" href="index1.html">GarageFind
         <span class="tradeMark">TM</span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -81,6 +81,8 @@
         </div>
     </div>
 </div>
+
+<!-- INDEX CONTENT -->
 <div class="container">
 
     <div class="row m-0 p-0">
@@ -93,58 +95,97 @@
         </div>
 
     </div>
+
     <div class="container">{{sale}}</div>
+
     <div class="row m-0 p-0">
 
+        <!--
         {{#each sale}}
         <div class="col-md-4 m-0 p-0">
-            <div class="card text-center">
-                <img class="card-img-top" src="{{ this.photo_url }}">
+            <div class="card text-center customCard">
+                <img class="card-img-top customCardImg" src="{{ this.photo_url }}">
                 <div class="card-body">
                     <h5 class="card-title">{{ this.address }}</h5>
                     <p class="card-text">{{ this.comments }}</p>
                     <a href="/listing/{{this.id}}" class="btn btn-primary border-0 indListingBtn">Check it Out</a>
-                    <!-- this might need a correction -->
+                    <- this might need a correction ->
                 </div>
+            </div>
+        </div>
+        {{/each}}
+        -->
+
+        {{#each sale}}
+        <div class="col-md-4 m-0 p-0">
+            <div class="card text-center customCard">
+                <img class="card-img-top customCardImg" src="{{ this.photo_url }}" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{ this.address }}</h5>
+                    <p class="card-text">{{ this.comments }}</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 mb-4">
+                        <a href="/listing/{{this.id}}" class="btn btn-primary border-0 px-5 indListingBtn">More Info</a>
+                    </div>
+                </div>
+
             </div>
         </div>
         {{/each}}
 
         <div class="col-md-4 m-0 p-0">
-            <div class="card text-center">
-                <img class="card-img-top" src="img/house1.jpg" alt="Card image cap">
+            <div class="card text-center customCard">
+                <img class="card-img-top customCardImg" src="img/house1.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">789 Stark Ln</h5>
                     <p class="card-text">Found a metal gauntlet with some stones in them. Never used it before and figured someone may have a
                         use for it. Selling other items as well: amulets, rare metals from foreign land, and metal suits.</p>
-                    <a href="listing.html" class="btn btn-primary border-0 indListingBtn">Go somewhere</a>
                 </div>
+
+                <div class="row">
+                    <div class="col-md-12 mb-4">
+                        <a href="listing.html" class="btn btn-primary border-0 px-5 indListingBtn">More Info</a>
+                    </div>
+                </div>
+
             </div>
         </div>
 
         <div class="col-md-4 m-0 p-0">
-            <div class="card text-center">
-                <img class="card-img-top" src="img/house2.jpg" alt="Card image cap">
+            <div class="card text-center customCard">
+                <img class="card-img-top customCardImg" src="img/house2.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">5678 Isle Lake Dr</h5>
                     <p class="card-text">We have too much stuff and want to get rid of it. Not picky on price, offering the best deals for all
                         buyers. Come and get it quick, things will sell out I promise!</p>
-                    <br>
-                    <a href="listing.html" class="btn btn-primary border-0 indListingBtn">Go somewhere</a>
                 </div>
+
+                <div class="row">
+                    <div class="col-md-12 mb-4">
+                        <a href="listing.html" class="btn btn-primary border-0 px-5 indListingBtn">More Info</a>
+                    </div>
+                </div>
+
             </div>
         </div>
 
         <div class="col-md-4 m-0 p-0">
-            <div class="card text-center">
-                <img class="card-img-top" src="img/house3.jpg" alt="Card image cap">
+            <div class="card text-center customCard">
+                <img class="card-img-top customCardImg" src="img/house3.jpg" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">345 Westshire Ln</h5>
                     <p class="card-text">Emptying out the closet full of kids clothes. We no longer need them. Come and find items, most are good...
                         there are some antiques.</p>
-                    <br>
-                    <a href="listing.html" class="btn btn-primary border-0 indListingBtn">Go somewhere</a>
                 </div>
+
+                <div class="row">
+                    <div class="col-md-12 mb-4">
+                        <a href="listing.html" class="btn btn-primary border-0 px-5 indListingBtn">More Info </a>
+                    </div>
+                </div>
+
             </div>
         </div>
 
