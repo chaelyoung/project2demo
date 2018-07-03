@@ -214,6 +214,27 @@ hr {
     color: white !important;
 }
 
+/*** SELL P2 ***/
+
+.sellCategories {
+}
+
+.sellQuantity {
+    font-size: 14px;
+}
+
+.custom-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #F3A712 !important;
+    cursor: pointer;
+}
+
+#termsAndAgreements {
+    font-style: italic;
+}
 
 /*** LISTING PAGE ***/
 
