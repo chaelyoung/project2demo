@@ -31,16 +31,16 @@ $(function () {
         validateDate(sale.date)
 
 
-        // Send the POST request.
-        // $.ajax("/api/sale", {
-        //     type: "POST",
-        //     data: sale
-        // }).then(
-        //     function () {
-        //         // Reload the page 
-        //         location.reload();
-        //     }
-        // );
+        Send the POST request.
+        $.ajax("/api/sale", {
+            type: "POST",
+            data: sale
+        }).then(
+            function () {
+                // Reload the page 
+                location.reload();
+            }
+        );
     });
 
 
