@@ -25,17 +25,50 @@ $(function () {
         };
 
         console.log(sale);
+        validateZip(sale.zip)
+
+
+        validateDate(sale.date)
+
 
         // Send the POST request.
-        $.ajax("/api/sale", {
-            type: "POST",
-            data: sale
-        }).then(
-            function () {
-                // Reload the page 
-                location.reload();
-            }
-        );
+        // $.ajax("/api/sale", {
+        //     type: "POST",
+        //     data: sale
+        // }).then(
+        //     function () {
+        //         // Reload the page 
+        //         location.reload();
+        //     }
+        // );
     });
 
+
+    function validateDate(date)
+        {
+            const formattedDate = moment(date)
+            console.log (formattedDate);
+            if (formattedDate.isValid()) {
+                console.log("valid date")
+            } else {
+                console.log("invalid date")
+            }
+        }
+
+    function validateZip(zipCode) {
+        console.log(typeof zipCode);
+        const parsedZip = parseInt(zipCode);
+        if (Number.isInteger(parsedZip) && zipCode.length === 5) {
+            console.log("this is a valid number");
+            if (true) {
+
+                // On line 45 replace true with regex if I want. This is optional.
+                return true;
+
+            }
+        } else {
+            console.log("invalid number");
+            return false;
+        }
+    }
 });
