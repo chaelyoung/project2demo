@@ -7,10 +7,12 @@ $(function () {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
 
+        var sale_event_id = $('.create-form').attr('sale_event_id');
         var dbDate = moment($("#date").val().trim()).format('YYYY-MM-DD');
 
         // create the object to be posted
         var sale = {
+            id: sale_event_id,
             useraccount_id: 1,
             address: $("#address").val().trim(),
             city: $("#city").val().trim(),
@@ -23,15 +25,16 @@ $(function () {
             photo_url: "http://via.placeholder.com/350x200",
         };
 
+        console.log(sale);
+
         // Send the POST request.
         $.ajax("/api/sale", {
-            type: "POST",
+            type: "PUT",
             data: sale
         }).then(
             function (resp) {
-                // Reload the page 
-                console.log(resp);
-                window.location.href = "/manageitems/"+resp.id;
+                // route to manage items page 
+                window.location.href = "/manageitems/"+sale_event_id;
             }
         );
     });

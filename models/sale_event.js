@@ -1,7 +1,7 @@
 /* jshint indent: 2 */
 
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('sale_event', {
+  var sale_event = sequelize.define('sale_event', {
     id: {
       type: DataTypes.INTEGER(11),
       allowNull: false,
@@ -58,4 +58,18 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     tableName: 'sale_event'
   });
+
+  sale_event.associate = function(models) {
+    //  When deleted, also delete any associated items
+    sale_event.hasMany(models.item, {
+      foreignKey: {
+        name: 'sale_event_id',
+        allowNull: false,
+        onDelete: "cascade"
+      }
+    });
+  };
+
+  return sale_event;
+
 };
