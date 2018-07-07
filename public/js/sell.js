@@ -31,7 +31,7 @@ $(function () {
         validateDate(sale.date)
 
 
-        Send the POST request.
+        // Send the POST request.
         $.ajax("/api/sale", {
             type: "POST",
             data: sale
