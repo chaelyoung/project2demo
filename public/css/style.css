@@ -191,6 +191,7 @@ hr {
 
 /*** SELL PAGE ***/
 
+/*
 #sellImgJumbo {
     background: url("../img/sell.jpg");
     background-size: cover;
@@ -198,6 +199,7 @@ hr {
     background-position: center center;
     height: 475px;
 }
+*/
 
 #sellInfoJumbo {
     background: #29335C !important;
