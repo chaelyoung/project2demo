@@ -50,14 +50,14 @@ $(function () {
         // create the object to be posted
         var sale = {
             useraccount_id: 1,
-            address: $("#address").val().trim(),
-            city: $("#city").val().trim(),
-            state: $("#state").val().trim(),
-            zip: $("#zipcode").val().trim(),
+            address: address,
+            city: city,
+            state: state,
+            zip: zip,
             date: dbDate,
-            start_time: dbDate + " " + $("#start-time").val().trim(),
-            end_time: dbDate + " " + $("#end-time").val().trim(),
-            comments: $("#comments").val().trim(),
+            start_time: starttime,
+            end_time: endtime,
+            comments: comments,
             photo_url: "http://via.placeholder.com/350x200",
         };
 
