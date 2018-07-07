@@ -11,7 +11,9 @@ var moment = require('moment');
 
 // Get all sale events and send home page 
 router.get("/", function (req, res) {
-  db.sale_event.findAll({})
+  db.sale_event.findAll({
+    order:['date']
+  })
     .then(function (data) {
       var hbsObject = {
         sale: datefmt(data)
@@ -207,11 +209,10 @@ var googleMapsClient = require('@google/maps').createClient({
   Promise: Promise
 });
 
+// Get coordinates from the DB search results.
 var getLatLng = function (data, callback) {
 
   var coords = [];
-  console.log("hi2");
-
 
   data.forEach(function (item) {
 
