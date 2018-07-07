@@ -7,10 +7,12 @@ $(function () {
         // Make sure to preventDefault on a submit event.
         event.preventDefault();
 
+        var sale_event_id = $('.create-form').attr('sale_event_id');
         var dbDate = moment($("#date").val().trim()).format('YYYY-MM-DD');
 
         // create the object to be posted
         var sale = {
+            id: sale_event_id,
             useraccount_id: 1,
             address: $("#address").val().trim(),
             city: $("#city").val().trim(),
@@ -23,50 +25,18 @@ $(function () {
             photo_url: "http://via.placeholder.com/350x200",
         };
 
-        validateZip(sale.zip)
-
-
-        validateDate(sale.date)
+        console.log(sale);
 
         // Send the POST request.
         $.ajax("/api/sale", {
-            type: "POST",
+            type: "PUT",
             data: sale
         }).then(
             function (resp) {
-                // Reload the page 
-                console.log(resp);
-                window.location.href = "/manageitems/"+resp.id;
+                // route to manage items page 
+                window.location.href = "/manageitems/"+sale_event_id;
             }
         );
     });
 
-
-    function validateDate(date)
-        {
-            const formattedDate = moment(date)
-            console.log (formattedDate);
-            if (formattedDate.isValid()) {
-                console.log("valid date")
-            } else {
-                console.log("invalid date")
-            }
-        }
-
-    function validateZip(zipCode) {
-        console.log(typeof zipCode);
-        const parsedZip = parseInt(zipCode);
-        if (Number.isInteger(parsedZip) && zipCode.length === 5) {
-            console.log("this is a valid number");
-            if (true) {
-
-                // On line 45 replace true with regex if I want. This is optional.
-                return true;
-
-            }
-        } else {
-            console.log("invalid number");
-            return false;
-        }
-    }
 });
