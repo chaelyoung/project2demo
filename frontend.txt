@@ -1,7 +1,0 @@
-1.  DOM manipulation:  as user scrolls, the background around GarageFinds will switch colors to be more cohesive. (craig)
-
-2. Adding carousel to current sales listing on index.html. 
-
-3. Fix links to files now that subfolder structure has changed. (mike)
-
-4. 
