@@ -1,11 +1,11 @@
+//  Import Express and create router
 var express = require("express");
-
 var router = express.Router();
 
-// Import the model (burger.js) to use its database functions.
+// Import the model to use its database functions
 var db = require("../models");
 
-// import moment JS
+// Import moment JS
 var moment = require('moment');
 
 
@@ -22,7 +22,7 @@ router.get("/", function (req, res) {
     });
 });
 
-// sell page route
+// Sell page route
 router.get("/sell", function (req, res) {
   res.render("sell");
 });
@@ -34,7 +34,7 @@ router.post("/api/sale", function (req, res) {
   });
 });
 
-// routing for each sale even page
+// Routing for each sale even page
 router.get("/listing/:id", function (req, res) {
   db.sale_event.findAll({
     where: {
@@ -71,14 +71,14 @@ router.post("/api/additems/:id", function (req, res) {
     })
 });
 
-// routing for managing the sale items of the event
+// Routing for managing the sale items of the event
 router.get("/manageitems/:id", function (req, res) {
   var hbsObject = { id: req.params.id }
   res.render("manageitems", hbsObject);
 });
 
 
-// routing for user listings
+// Routing for user listings
 router.get("/mylistings", function (req, res) {
   db.sale_event.findAll({})
     .then(function (data) {
@@ -90,7 +90,7 @@ router.get("/mylistings", function (req, res) {
 });
 
 
-// delete listing
+// Delete listing
 router.post("/api/delete/:id", function (req, res) {
 
   db.sale_event.destroy({
@@ -103,7 +103,7 @@ router.post("/api/delete/:id", function (req, res) {
     })
 });
 
-// routing for each sale even page
+// Routing for each sale even page
 router.get("/editlisting/:id", function (req, res) {
   db.sale_event.findAll({
     where: {
@@ -118,7 +118,7 @@ router.get("/editlisting/:id", function (req, res) {
   });
 });
 
-// PUT Request - Update o Sale_event DB
+// PUT Request - Update Sale_event DB
 router.put("/api/sale", function (req, res) {
   db.sale_event.update(
     req.body,
@@ -204,8 +204,8 @@ function datefmt(arr) {
 };
 
 
+// Require google maps
 
-// require google maps
 var googleMapsClient = require('@google/maps').createClient({
   key: process.env.GOOGLE_APIKEY,
   Promise: Promise
