@@ -203,9 +203,11 @@ function datefmt(arr) {
   return arr
 };
 
+
 // Require google maps
+
 var googleMapsClient = require('@google/maps').createClient({
-  key: 'AIzaSyBAhNxc8BbsIMC5tFTNUSADF8vhSiNxXmA',
+  key: process.env.GOOGLE_APIKEY,
   Promise: Promise
 });
 
